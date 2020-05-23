@@ -2,6 +2,7 @@ import Tooltip from "./ninja-ui/tooltip";
 import Dropdown from "./ninja-ui/dropdown";
 import Tabs from "./ninja-ui/tabs";
 import Snackbar from "./ninja-ui/snackbar";
+import TypeWriter from "./ninja-ui/typewriter";
 
 // create a tooltip
 const tooltip = new Tooltip(document.querySelector(".tooltip"));
@@ -25,3 +26,14 @@ const button = document.querySelector("button");
 button.addEventListener("click", () => {
     snackbar.show("you clicked me :)");
 });
+// Init On DOM Load
+document.addEventListener("DOMContentLoaded", init);
+
+// Init typewriter app
+function init() {
+    const txtElement = document.querySelector(".txt-type");
+    const words = JSON.parse(txtElement.getAttribute("data-words"));
+    const wait = txtElement.getAttribute("data-wait");
+    // Init TypeWriter
+    new TypeWriter(txtElement, words, wait);
+}
