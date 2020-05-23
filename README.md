@@ -10,6 +10,8 @@ apps -
 
 - snackbar - popup message top
 
+- typewriter - typewriting effect
+
 
 
 NPM scripts included:
