@@ -1,8 +1,8 @@
-import Tooltip from "./ninja-ui/tooltip";
-import Dropdown from "./ninja-ui/dropdown";
-import Tabs from "./ninja-ui/tabs";
-import Snackbar from "./ninja-ui/snackbar";
-import TypeWriter from "./ninja-ui/typewriter";
+import Tooltip from "./eakzit-ui/tooltip";
+import Dropdown from "./eakzit-ui/dropdown";
+import Tabs from "./eakzit-ui/tabs";
+import Snackbar from "./eakzit-ui/snackbar";
+import TypeWriter from "./eakzit-ui/typewriter";
 
 // create a tooltip
 const tooltip = new Tooltip(document.querySelector(".tooltip"));

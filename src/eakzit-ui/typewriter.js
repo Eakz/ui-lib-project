@@ -9,6 +9,7 @@ class TypeWriter {
         this.wait = parseInt(wait, 10);
         this.type();
         this.isDeleting = false;
+        this.startPause=false;
     }
     type() {
         // Current index of word
@@ -37,11 +38,16 @@ class TypeWriter {
             // Set delete to true
             this.isDeleting = true;
         } else if (this.isDeleting && this.txt === "") {
+            if(this.startPause){
             this.isDeleting = false;
+            this.startPause=false;
             // Move to next word
             this.wordIndex++;
             // Pause before start typing
-            typeSpeed = 500;
+            typeSpeed = 500;}else{
+                typeSpeed=this.wait/2;
+                this.startPause=true;
+            }
         }
         setTimeout(() => this.type(), typeSpeed);
     }
