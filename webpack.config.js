@@ -7,8 +7,18 @@ module.exports = {
         filename: "bundle.js",
     },
     devServer: {
-        contentBase: path.resolve(__dirname, "dist"),
-        publicPath: "/assets/",
+        static: {
+            directory: path.join(__dirname, "dist")
+          },
+        devMiddleware: {
+            index: true,
+            mimeTypes: { phtml: 'text/html' },
+            publicPath: "/assets/",
+            serverSideRender: true,
+            writeToDisk: true,
+          }
+       
+      
     },
     module: {
         rules: [
