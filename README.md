@@ -1,4 +1,4 @@
-UI personal LIB - 
+UI personal LIB(deprecated, inc storybook) - 
 
 apps - 
 
